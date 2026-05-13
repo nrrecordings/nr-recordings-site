@@ -1,6 +1,14 @@
 import React from 'react'
-import { createRoot } from 'react-dom/client'
+import ReactDOM from 'react-dom/client'
 import './style.css'
-import App from './App.jsx'
 
-createRoot(document.getElementById('root')).render(<App />)
+function App() {
+  return (
+    <div style={{padding:'60px',background:'#000',minHeight:'100vh',color:'#fff',fontFamily:'Arial'}}>
+      <h1 style={{fontSize:'72px',marginBottom:'20px'}}>NR Recordings</h1>
+      <p>Drum & Bass label site coming soon.</p>
+    </div>
+  )
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />)
