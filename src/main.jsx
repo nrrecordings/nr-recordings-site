@@ -11,10 +11,14 @@ const releases = [
 
 const artists = ['Roster', 'DJs', 'Producers', 'Vocalists', 'Collaborators'];
 
-function TextLogo({ className = '' }) {
+function NRMark({ className = '' }) {
+  return <img className={`nr-mark ${className}`} src="/assets/nr-mark-purple.png" alt="NR" />;
+}
+
+function TextLogo() {
   return (
-    <div className={`text-logo ${className}`}>
-      <img src="/assets/nr-mark-purple.png" alt="NR" />
+    <div className="text-logo">
+      <NRMark />
       <div>
         <span className="notrite">NOTRITE</span>
         <span className="recordings">RECORDINGS</span>
@@ -26,7 +30,7 @@ function TextLogo({ className = '' }) {
 function MainLogo() {
   return (
     <div className="main-logo">
-      <img src="/assets/nr-mark-purple.png" alt="NR logo" />
+      <NRMark />
       <div className="main-logo-words">
         <span className="notrite">NOTRITE</span>
         <span className="recordings">RECORDINGS</span>
@@ -85,7 +89,7 @@ function App() {
 
       <section id="featured" className="featured">
         <div className="feature-cover">
-          <img src="/assets/nr-mark-purple.png" alt="NR logo" />
+          <NRMark />
           <div>
             <small>NR001</small>
             <h2>First Release</h2>
@@ -137,7 +141,7 @@ function App() {
           {releases.map((release) => (
             <article className="release-card" key={release.code}>
               <div className="release-art">
-                <img src="/assets/nr-mark-purple.png" alt="" />
+                <NRMark />
               </div>
               <small>{release.code}</small>
               <h3>{release.title}</h3>
