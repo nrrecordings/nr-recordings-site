@@ -9,131 +9,228 @@ const releases = [
   { code: 'NR004', title: 'Pressure Series', artist: 'TBA' }
 ];
 
+const artists = ['Roster', 'DJs', 'Producers', 'Vocalists', 'Collaborators'];
+
+function TextLogo({ className = '' }) {
+  return (
+    <div className={`text-logo ${className}`}>
+      <img src="/assets/nr-mark-purple.png" alt="NR" />
+      <div>
+        <span className="notrite">NOTRITE</span>
+        <span className="recordings">RECORDINGS</span>
+      </div>
+    </div>
+  );
+}
+
+function MainLogo() {
+  return (
+    <div className="main-logo">
+      <img src="/assets/nr-mark-purple.png" alt="NR logo" />
+      <div className="main-logo-words">
+        <span className="notrite">NOTRITE</span>
+        <span className="recordings">RECORDINGS</span>
+      </div>
+    </div>
+  );
+}
+
 function App() {
   return (
     <main className="site">
       <header className="topbar">
-        <a href="#home" className="brand">
-          <span className="brand-nr">NR</span>
-          <span className="brand-name">Notrite<br />Recordings</span>
-        </a>
+        <a href="#home" aria-label="Notrite Recordings home"><TextLogo /></a>
         <nav>
           <a href="#home">Home</a>
           <a href="#releases">Releases</a>
+          <a href="#artists">Artists</a>
+          <a href="#events">Events</a>
           <a href="#merch">Merch</a>
           <a href="#demos">Demo Submissions</a>
+          <a href="#about">About</a>
           <a href="#contact">Contact</a>
         </nav>
+        <div className="icon-row">
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="SoundCloud">☁</a>
+          <a href="#" aria-label="Spotify">◉</a>
+          <a href="#" aria-label="Cart">⌁</a>
+        </div>
       </header>
 
       <section id="home" className="hero">
+        <div className="hero-bg" />
         <div className="hero-copy">
-          <p className="kicker">Independent Music Label</p>
-          <h1>No Rules.<span>No Limits.</span><strong>Just Music.</strong></h1>
-          <p className="intro">
+          <p className="eyebrow">Independent Music Label</p>
+          <h1>
+            <span>No Rules.</span>
+            <span>No Limits.</span>
+            <strong>Just Music.</strong>
+          </h1>
+          <p>
             Notrite Recordings is an independent label pushing underground sounds,
             future artists and music culture without boundaries.
           </p>
-          <div className="actions">
-            <a className="button primary" href="#releases">Latest Release →</a>
-            <a className="button ghost" href="#demos">Demo Submissions</a>
+          <div className="buttons">
+            <a className="btn primary" href="#featured">Latest Release <span>→</span></a>
+            <a className="btn ghost" href="#demos">Demo Submissions</a>
           </div>
+          <a href="#featured" className="scroll">Scroll ↓</a>
         </div>
 
-        <div className="hero-logo">
-          <img src="/assets/notrite-logo-full.png" alt="Notrite Recordings logo" />
-          <div className="logo-fallback">NR<br /><small>Notrite Recordings</small></div>
+        <div className="hero-logo-wrap">
+          <MainLogo />
         </div>
       </section>
 
-      <section className="featured">
-        <div className="cover">
-          <img src="/assets/nr-logo.png" alt="NR logo" />
+      <section id="featured" className="featured">
+        <div className="feature-cover">
+          <img src="/assets/nr-mark-purple.png" alt="NR logo" />
           <div>
-            <p>NR001</p>
+            <small>NR001</small>
             <h2>First Release</h2>
-            <span>Coming Soon</span>
+            <p>Coming Soon</p>
           </div>
         </div>
-        <div className="release-info">
-          <p className="kicker">NR001</p>
+
+        <div className="feature-info">
+          <small>NR001</small>
           <h2>Notrite Launch Release</h2>
           <h3>Artist / Title TBA</h3>
           <p>
             Our first official release is coming soon. Expect underground energy,
             heavyweight production and forward-thinking music.
           </p>
-          <div className="actions">
-            <a className="button primary" href="#">Listen Soon</a>
-            <a className="button ghost" href="#demos">Send Demo</a>
+          <div className="platforms">
+            <span>Spotify</span>
+            <span>SoundCloud</span>
+            <span>Bandcamp</span>
+          </div>
+          <div className="buttons">
+            <a className="btn primary" href="#">Listen Soon →</a>
+            <a className="btn ghost" href="#demos">Send Demo</a>
           </div>
         </div>
+
+        <section id="artists" className="artists-panel">
+          <div className="section-head compact">
+            <h2>Our Artists</h2>
+            <a href="#">Coming soon →</a>
+          </div>
+          <div className="artist-strip">
+            {artists.map((artist) => (
+              <article key={artist}>
+                <div className="artist-placeholder">NR</div>
+                <h3>{artist}</h3>
+              </article>
+            ))}
+          </div>
+        </section>
       </section>
 
-      <section id="releases" className="grid-section">
+      <section id="releases" className="releases">
         <div className="section-head">
           <h2>Latest Releases</h2>
           <a href="#">View all releases →</a>
         </div>
         <div className="release-grid">
           {releases.map((release) => (
-            <article className="mini-card" key={release.code}>
-              <div className="mini-art">
-                <img src="/assets/nr-logo.png" alt="" />
-                <span>NR</span>
+            <article className="release-card" key={release.code}>
+              <div className="release-art">
+                <img src="/assets/nr-mark-purple.png" alt="" />
               </div>
-              <p>{release.code}</p>
+              <small>{release.code}</small>
               <h3>{release.title}</h3>
-              <small>{release.artist}</small>
+              <p>{release.artist}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section id="merch" className="split">
+      <section className="lower-grid">
+        <div id="merch" className="merch panel">
+          <div className="section-head compact">
+            <h2>Merch</h2>
+            <a href="#">Shopify later →</a>
+          </div>
+          <div className="merch-grid">
+            {['Logo Tee', 'Drip Hoodie', 'Snapback', 'Side Bag'].map((item) => (
+              <article key={item}>
+                <div className="product">NR</div>
+                <h3>{item}</h3>
+                <p>Coming soon</p>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div id="events" className="event panel">
+          <div className="section-head compact">
+            <h2>Next Event</h2>
+          </div>
+          <div className="event-card">
+            <div className="date">
+              <strong>TBA</strong>
+              <span>2026</span>
+            </div>
+            <div>
+              <h3>Notrite Takeover</h3>
+              <p>Dates, tickets and line-up coming soon.</p>
+              <a className="btn ghost small" href="#contact">More Info</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="demos" className="signup panel">
+          <div className="mail-icon">✉</div>
+          <div>
+            <h2>Stay In The Loop</h2>
+            <p>Sign up for exclusive releases, events and merch drops.</p>
+          </div>
+          <form className="newsletter">
+            <input placeholder="Enter your email" />
+            <button type="button">Subscribe</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="about" className="about">
         <div>
-          <h2>Merch Coming Soon</h2>
-          <p>Shopify integration can be added later for tees, hoodies, caps, bags and vinyl drops.</p>
+          <p className="eyebrow">About Notrite Recordings</p>
+          <h2>No rules. No limits. Built around music.</h2>
+          <p>
+            Notrite Recordings starts with drum and bass culture, but the label is
+            built to move wherever the music takes it. Releases, collaborations,
+            visuals, merch and events will grow from the same underground energy.
+          </p>
         </div>
-        <div className="product-grid">
-          {['Logo Tee', 'Drip Hoodie', 'Snapback', 'Side Bag'].map((item) => (
-            <article key={item}>
-              <div className="product-box">NR</div>
-              <h3>{item}</h3>
-              <small>Coming soon</small>
-            </article>
-          ))}
-        </div>
+        <div className="about-logo"><MainLogo /></div>
       </section>
 
-      <section id="demos" className="demos">
-        <h2>Demo Submissions</h2>
-        <p>Send music, links and enquiries directly to the right inbox.</p>
-        <div className="email-buttons">
+      <section id="contact" className="contact">
+        <div>
+          <p className="eyebrow">Contact</p>
+          <h2>Send us something</h2>
+          <p>For now these go straight to your email addresses. A proper connected form can be added next.</p>
+        </div>
+        <div className="email-list">
           <a href="mailto:demos@nrrecordings.com">demos@nrrecordings.com</a>
           <a href="mailto:bookings@nrrecordings.com">bookings@nrrecordings.com</a>
           <a href="mailto:info@nrrecordings.com">info@nrrecordings.com</a>
         </div>
       </section>
 
-      <section id="contact" className="contact">
-        <h2>Contact</h2>
-        <form action="mailto:info@nrrecordings.com" method="post" encType="text/plain">
-          <input name="name" placeholder="Your name" />
-          <input name="email" placeholder="Your email" />
-          <select name="enquiry">
-            <option>General enquiry</option>
-            <option>Demo submission</option>
-            <option>Booking enquiry</option>
-          </select>
-          <textarea name="message" placeholder="Message / links / details" />
-          <button type="submit">Send Message</button>
-        </form>
-      </section>
-
-      <footer>
-        <strong>NR Notrite Recordings</strong>
-        <p>© 2026 Notrite Recordings. All rights reserved.</p>
+      <footer className="footer">
+        <TextLogo />
+        <p>Independent music label supporting underground artists and pushing sound forward.</p>
+        <div className="footer-links">
+          <a href="#home">Home</a>
+          <a href="#releases">Releases</a>
+          <a href="#merch">Merch</a>
+          <a href="#demos">Demo Submissions</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <small>© 2026 Notrite Recordings. All rights reserved.</small>
       </footer>
     </main>
   );
