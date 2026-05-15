@@ -3,10 +3,10 @@ import { createRoot } from 'react-dom/client';
 import './style.css';
 
 const releases = [
-  { code: 'NRR001', title: 'Shadows EP', artist: 'KVRN', tag: 'Dark Rollers', status: 'Out Soon', image: '/assets/release-shadows.jpg' },
-  { code: 'NRR002', title: 'Pressure', artist: 'DYLX', tag: 'Deep / Tech', status: 'Preview', image: '/assets/release-pressure.jpg' },
-  { code: 'NRR003', title: 'System Error EP', artist: 'RAVEN', tag: 'Bass / Halftime', status: 'Pre-Save', image: '/assets/release-system-error.jpg' },
-  { code: 'NRR004', title: 'Afterhours EP', artist: 'VEXTA', tag: 'Atmospheric DnB', status: 'Coming Soon', image: '/assets/release-afterhours.jpg' }
+  { code: 'NRR001', title: 'All In My Head EP', artist: 'MISTAFIL x Mark XTC', tag: 'Liquid Drum & Bass', status: 'Coming Soon', image: '/assets/release-mm-all-in-my-head.jpg' },
+  { code: 'NRR002', title: 'Shadows EP', artist: 'KVRN', tag: 'Dark Rollers', status: 'TBA', image: '/assets/release-shadows.jpg' },
+  { code: 'NRR003', title: 'Pressure', artist: 'DYLX', tag: 'Deep / Tech', status: 'TBA', image: '/assets/release-pressure.jpg' },
+  { code: 'NRR004', title: 'System Error EP', artist: 'RAVEN', tag: 'Bass / Halftime', status: 'TBA', image: '/assets/release-system-error.jpg' }
 ];
 
 const artists = [
@@ -102,16 +102,19 @@ function App() {
       </section>
 
       <section id="featured" className="featured">
-        <div className="release-art feature-art">
-          <img src="/assets/release-shadows.jpg" alt="Shadows EP artwork" />
+        <div className="release-art feature-art first-release-art">
+          <img src="/assets/release-mm-all-in-my-head.jpg" alt="MISTAFIL x Mark XTC - All In My Head EP artwork" />
         </div>
 
-        <div className="release-info">
-          <small>NRR001</small>
-          <h2>Shadows EP</h2>
-          <h3>KVRN / NRR001</h3>
+        <div className="release-info first-release-info">
+          <small>NRR001 / FIRST RELEASE</small>
+          <h2>All In My Head EP</h2>
+          <h3>MISTAFIL x Mark XTC</h3>
           <p>
-            A dark rolling opener built around late-night pressure, warehouse atmosphere and heavyweight low-end movement.
+            MISTAFIL and Mark XTC join forces for the first official Notrite Recordings release:
+            a powerhouse liquid drum & bass EP featuring <strong>All In My Head</strong> and
+            <strong> Thinkin Bout You</strong>. Rolling energy, euphoric hooks and heavyweight
+            production from two respected names in the scene.
           </p>
           <div className="platforms">
             <span>Spotify</span><span>SoundCloud</span><span>Bandcamp</span>
@@ -147,8 +150,8 @@ function App() {
           <a href="#">View all releases →</a>
         </div>
         <div className="release-grid">
-          {releases.map((release) => (
-            <article className="release-tile" key={release.code}>
+          {releases.map((release, index) => (
+            <article className={`release-tile ${index === 0 ? 'real-first-release' : ''}`} key={release.code}>
               <div className="mini-art">
                 <img src={release.image} alt={`${release.title} artwork`} />
                 <span>{release.status}</span>
