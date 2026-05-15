@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import './style.css';
 
 const releases = [
-  { code: 'NRR001', title: 'All In My Head EP', artist: 'MISTAFIL x Mark XTC', tag: 'Liquid Drum & Bass', status: 'Coming Soon', image: '/assets/release-mm-all-in-my-head.jpg' },
+  { code: 'NRR001', title: 'All In My Head EP', artist: 'MARK XTC x MISTAFIL', tag: 'Drum & Bass', status: 'Coming Soon', image: '/assets/release-mm-all-in-my-head.jpg' },
   { code: 'NRR002', title: 'Shadows EP', artist: 'KVRN', tag: 'Dark Rollers', status: 'TBA', image: '/assets/release-shadows.jpg' },
   { code: 'NRR003', title: 'Pressure', artist: 'DYLX', tag: 'Deep / Tech', status: 'TBA', image: '/assets/release-pressure.jpg' },
   { code: 'NRR004', title: 'System Error EP', artist: 'RAVEN', tag: 'Bass / Halftime', status: 'TBA', image: '/assets/release-system-error.jpg' }
@@ -103,16 +103,16 @@ function App() {
 
       <section id="featured" className="featured">
         <div className="release-art feature-art first-release-art">
-          <img src="/assets/release-mm-all-in-my-head.jpg" alt="MISTAFIL x Mark XTC - All In My Head EP artwork" />
+          <img src="/assets/release-mm-all-in-my-head.jpg" alt="MARK XTC x MISTAFIL - All In My Head EP artwork" />
         </div>
 
         <div className="release-info first-release-info">
           <small>NRR001 / FIRST RELEASE</small>
           <h2>All In My Head EP</h2>
-          <h3>MISTAFIL x Mark XTC</h3>
+          <h3>MARK XTC x MISTAFIL</h3>
           <p>
             MISTAFIL and Mark XTC join forces for the first official Notrite Recordings release:
-            a powerhouse liquid drum & bass EP featuring <strong>All In My Head</strong> and
+            a powerhouse Drum & Bass EP featuring <strong>All In My Head</strong> and
             <strong> Thinkin Bout You</strong>. Rolling energy, euphoric hooks and heavyweight
             production from two respected names in the scene.
           </p>
