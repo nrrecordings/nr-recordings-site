@@ -326,3 +326,26 @@
 .release-tile:not(.real-first-release) .mini-art img {
   object-fit: cover !important;
 }
+
+
+.release-logo-panel img,
+.release-logo-panel .mm-logo,
+.release-logo-panel svg {
+  width: 185% !important;
+  max-width: none !important;
+  height: auto !important;
+  object-fit: contain !important;
+  transform: scale(2.6) !important;
+  filter:
+    drop-shadow(0 0 30px rgba(168,85,247,.65))
+    drop-shadow(0 0 90px rgba(168,85,247,.35));
+}
+
+@media (max-width: 900px) {
+  .release-logo-panel img,
+  .release-logo-panel .mm-logo,
+  .release-logo-panel svg {
+    width: 135% !important;
+    transform: scale(1.6) !important;
+  }
+}
