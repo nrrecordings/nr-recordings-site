@@ -2,16 +2,22 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './style.css';
 
+const releases = [
+  { code: 'NR001', title: 'Signal Pressure', artist: 'Notrite Recordings', tag: 'Liquid / Roller', status: 'Out Soon' },
+  { code: 'NR002', title: 'After Hours', artist: 'NR Collective', tag: 'Deep / Vocal', status: 'Preview' },
+  { code: 'NR003', title: 'Northbound', artist: 'Various Artists', tag: 'Jungle / Breaks', status: 'Pre-Save' },
+  { code: 'NR004', title: 'No Limits', artist: 'Notrite Sessions', tag: 'Bass Music', status: 'Coming Soon' }
+];
+
 const artists = ['Roster', 'DJs', 'Producers', 'Vocalists', 'Collaborators'];
-const releases = ['NR001', 'NR002', 'NR003', 'NR004'];
 
 function NRMark({ className = '' }) {
   return <img className={`nr-mark ${className}`} src="/assets/nr-mark.png" alt="NR" />;
 }
 
-function BrandLogo({ className = '' }) {
+function BrandLogo() {
   return (
-    <div className={`brand-logo ${className}`}>
+    <div className="brand-logo">
       <NRMark />
       <div className="brand-words">
         <span className="notrite">NOTRITE</span>
@@ -38,7 +44,6 @@ function App() {
     <main className="site">
       <header className="topbar">
         <a href="#home"><BrandLogo /></a>
-
         <nav>
           <a href="#home">Home</a>
           <a href="#releases">Releases</a>
@@ -49,7 +54,6 @@ function App() {
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
         </nav>
-
         <div className="social-icons">
           <a href="#">◎</a>
           <a href="#">☁</a>
@@ -75,7 +79,6 @@ function App() {
             <a className="btn primary" href="#featured">Latest Release →</a>
             <a className="btn ghost" href="#demos">Demo Submissions</a>
           </div>
-          <a className="scroll" href="#featured">Scroll ↓</a>
         </div>
 
         <div className="hero-logo">
@@ -84,28 +87,28 @@ function App() {
       </section>
 
       <section id="featured" className="featured">
-        <div className="release-art">
+        <div className="release-art feature-art">
           <NRMark />
           <div>
             <small>NR001</small>
-            <h2>Coming Soon</h2>
-            <p>First release</p>
+            <h2>Signal Pressure</h2>
+            <p>Out Soon</p>
           </div>
         </div>
 
         <div className="release-info">
           <small>NR001</small>
-          <h2>Notrite Launch Release</h2>
-          <h3>Artist / Title TBA</h3>
+          <h2>Signal Pressure</h2>
+          <h3>Notrite Recordings / Launch Drop</h3>
           <p>
-            Our first official release is coming soon. Expect underground energy,
-            heavyweight production and forward-thinking music.
+            A heavyweight first drop built around underground pressure, rolling basslines
+            and future-facing energy. Placeholder release content for launch preview.
           </p>
           <div className="platforms">
             <span>Spotify</span><span>SoundCloud</span><span>Bandcamp</span>
           </div>
           <div className="buttons">
-            <a className="btn primary" href="#">Listen Soon →</a>
+            <a className="btn primary" href="#">Pre-Save Soon →</a>
             <a className="btn ghost" href="#demos">Send Demo</a>
           </div>
         </div>
@@ -132,12 +135,17 @@ function App() {
           <a href="#">View all releases →</a>
         </div>
         <div className="release-grid">
-          {releases.map((code) => (
-            <article key={code}>
-              <div className="mini-art"><NRMark /></div>
-              <small>{code}</small>
-              <h3>Coming Soon</h3>
-              <p>Notrite Recordings</p>
+          {releases.map((release, index) => (
+            <article className={`release-tile release-${index + 1}`} key={release.code}>
+              <div className="mini-art">
+                <NRMark />
+                <div className="art-noise" />
+                <span>{release.status}</span>
+              </div>
+              <small>{release.code}</small>
+              <h3>{release.title}</h3>
+              <p>{release.artist}</p>
+              <em>{release.tag}</em>
             </article>
           ))}
         </div>
