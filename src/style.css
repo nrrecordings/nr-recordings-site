@@ -241,7 +241,7 @@
 .product img {
   width: 100% !important;
   height: 100% !important;
-  object-fit: cover !important;
+  object-fit: contain !important;
   object-position: center center !important;
   display: block !important;
   background: #0a0a0a !important;
@@ -324,7 +324,7 @@
 
 /* Keep older placeholder release images cropped, but real release contained */
 .release-tile:not(.real-first-release) .mini-art img {
-  object-fit: cover !important;
+  object-fit: contain !important;
 }
 
 
@@ -343,10 +343,19 @@
   height: 100% !important;
   max-width: none !important;
   max-height: none !important;
-  object-fit: cover !important;
+  object-fit: contain !important;
   object-position: center center !important;
   padding: 0 !important;
-  transform: scale(1.22) !important;
+  transform: scale(1.02) !important;
   display: block !important;
   filter: drop-shadow(0 0 28px rgba(168,85,247,.42)) !important;
+}
+
+
+/* V26 final balance fix */
+.featured > .first-release-art img,
+.featured > .release-art.feature-art.first-release-art img {
+  max-width: 88% !important;
+  max-height: 88% !important;
+  margin: auto !important;
 }
