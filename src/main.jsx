@@ -3,17 +3,17 @@ import { createRoot } from 'react-dom/client';
 import './style.css';
 
 const releases = [
-  { code: 'NRR001', title: 'Signal Pressure', artist: 'Notrite Recordings', tag: 'Liquid / Roller', status: 'Out Soon', image: '/assets/release-signal-pressure.jpg' },
-  { code: 'NRR002', title: 'After Hours', artist: 'NR Collective', tag: 'Deep / Vocal', status: 'Preview', image: '/assets/release-after-hours.jpg' },
-  { code: 'NRR003', title: 'Northbound', artist: 'Various Artists', tag: 'Jungle / Breaks', status: 'Pre-Save', image: '/assets/release-northbound.jpg' },
-  { code: 'NRR004', title: 'No Limits', artist: 'Notrite Sessions', tag: 'Bass Music', status: 'Coming Soon', image: '/assets/release-no-limits.jpg' }
+  { code: 'NRR001', title: 'Shadows EP', artist: 'KVRN', tag: 'Dark Rollers', status: 'Out Soon', image: '/assets/release-shadows.jpg' },
+  { code: 'NRR002', title: 'Pressure', artist: 'DYLX', tag: 'Deep / Tech', status: 'Preview', image: '/assets/release-pressure.jpg' },
+  { code: 'NRR003', title: 'System Error EP', artist: 'RAVEN', tag: 'Bass / Halftime', status: 'Pre-Save', image: '/assets/release-system-error.jpg' },
+  { code: 'NRR004', title: 'Afterhours EP', artist: 'VEXTA', tag: 'Atmospheric DnB', status: 'Coming Soon', image: '/assets/release-afterhours.jpg' }
 ];
 
 const artists = [
   { name: 'KVRN', sound: 'Dark rolling DnB', image: '/assets/artist-kvrn.jpg' },
   { name: 'DYLX', sound: 'Tech-driven pressure', image: '/assets/artist-dylx.jpg' },
-  { name: 'VEXTA', sound: 'Atmospheric bass music', image: '/assets/artist-vexta.jpg' },
   { name: 'RAVEN', sound: 'Halftime / experimental', image: '/assets/artist-raven.jpg' },
+  { name: 'VEXTA', sound: 'Atmospheric bass music', image: '/assets/artist-vexta.jpg' },
   { name: 'SUBSTRIKE', sound: 'Warehouse rollers', image: '/assets/artist-substrike.jpg' },
   { name: 'SYNAPTIK', sound: 'Minimal future sounds', image: '/assets/artist-synaptik.jpg' }
 ];
@@ -95,16 +95,15 @@ function App() {
 
       <section id="featured" className="featured">
         <div className="release-art feature-art">
-          <img src="/assets/release-signal-pressure.jpg" alt="Signal Pressure artwork" />
+          <img src="/assets/release-shadows.jpg" alt="Shadows EP artwork" />
         </div>
 
         <div className="release-info">
           <small>NRR001</small>
-          <h2>Signal Pressure</h2>
-          <h3>Notrite Recordings / Launch Drop</h3>
+          <h2>Shadows EP</h2>
+          <h3>KVRN / NRR001</h3>
           <p>
-            A heavyweight first drop built around underground pressure, rolling basslines
-            and future-facing energy. Placeholder release content for launch preview.
+            A dark rolling opener built around late-night pressure, warehouse atmosphere and heavyweight low-end movement.
           </p>
           <div className="platforms">
             <span>Spotify</span><span>SoundCloud</span><span>Bandcamp</span>
