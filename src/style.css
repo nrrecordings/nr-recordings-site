@@ -160,3 +160,71 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+/* v12 centred realistic merch cards */
+.merch-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: start;
+}
+
+.product {
+  aspect-ratio: 1 / 1;
+  background: #090909 !important;
+  border: 1px solid rgba(255,255,255,.16);
+  overflow: hidden;
+  display: block;
+}
+
+.product img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important;
+  object-position: center center !important;
+  display: block;
+  background: #090909;
+  filter: grayscale(.05) contrast(1.05) brightness(.96);
+  transition: .25s;
+}
+
+.merch-grid article {
+  min-width: 0;
+}
+
+.merch-grid article h3 {
+  font-size: clamp(16px, 1.25vw, 22px);
+  line-height: 1.18;
+  min-height: 52px;
+  margin-top: 14px;
+  max-width: 95%;
+}
+
+.merch-grid article p {
+  color: #d8d8dd;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: .05em;
+}
+
+.merch-grid article:hover .product img {
+  transform: scale(1.02);
+  filter: grayscale(0) contrast(1.08) brightness(1);
+}
+
+@media(max-width: 1250px) {
+  .merch-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media(max-width: 760px) {
+  .merch-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 520px) {
+  .merch-grid {
+    grid-template-columns: 1fr;
+  }
+}

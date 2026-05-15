@@ -166,7 +166,7 @@ function App() {
         <div id="merch" className="panel">
           <div className="section-head">
             <h2>Merch</h2>
-            <a href="#">Shopify later →</a>
+            <a href="#">Shopify Later →</a>
           </div>
           <div className="merch-grid">
             {merch.map((item) => (
