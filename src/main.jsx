@@ -3,13 +3,20 @@ import { createRoot } from 'react-dom/client';
 import './style.css';
 
 const releases = [
-  { code: 'NR001', title: 'Signal Pressure', artist: 'Notrite Recordings', tag: 'Liquid / Roller', status: 'Out Soon' },
-  { code: 'NR002', title: 'After Hours', artist: 'NR Collective', tag: 'Deep / Vocal', status: 'Preview' },
-  { code: 'NR003', title: 'Northbound', artist: 'Various Artists', tag: 'Jungle / Breaks', status: 'Pre-Save' },
-  { code: 'NR004', title: 'No Limits', artist: 'Notrite Sessions', tag: 'Bass Music', status: 'Coming Soon' }
+  { code: 'NRR001', title: 'Signal Pressure', artist: 'Notrite Recordings', tag: 'Liquid / Roller', status: 'Out Soon', image: '/assets/release-signal-pressure.jpg' },
+  { code: 'NRR002', title: 'After Hours', artist: 'NR Collective', tag: 'Deep / Vocal', status: 'Preview', image: '/assets/release-after-hours.jpg' },
+  { code: 'NRR003', title: 'Northbound', artist: 'Various Artists', tag: 'Jungle / Breaks', status: 'Pre-Save', image: '/assets/release-northbound.jpg' },
+  { code: 'NRR004', title: 'No Limits', artist: 'Notrite Sessions', tag: 'Bass Music', status: 'Coming Soon', image: '/assets/release-no-limits.jpg' }
 ];
 
-const artists = ['Roster', 'DJs', 'Producers', 'Vocalists', 'Collaborators'];
+const artists = [
+  { name: 'KVRN', sound: 'Dark rolling DnB', image: '/assets/artist-kvrn.jpg' },
+  { name: 'DYLX', sound: 'Tech-driven pressure', image: '/assets/artist-dylx.jpg' },
+  { name: 'VEXTA', sound: 'Atmospheric bass music', image: '/assets/artist-vexta.jpg' },
+  { name: 'RAVEN', sound: 'Halftime / experimental', image: '/assets/artist-raven.jpg' },
+  { name: 'SUBSTRIKE', sound: 'Warehouse rollers', image: '/assets/artist-substrike.jpg' },
+  { name: 'SYNAPTIK', sound: 'Minimal future sounds', image: '/assets/artist-synaptik.jpg' }
+];
 
 function NRMark({ className = '' }) {
   return <img className={`nr-mark ${className}`} src="/assets/nr-mark.png" alt="NR" />;
@@ -88,16 +95,11 @@ function App() {
 
       <section id="featured" className="featured">
         <div className="release-art feature-art">
-          <NRMark />
-          <div>
-            <small>NR001</small>
-            <h2>Signal Pressure</h2>
-            <p>Out Soon</p>
-          </div>
+          <img src="/assets/release-signal-pressure.jpg" alt="Signal Pressure artwork" />
         </div>
 
         <div className="release-info">
-          <small>NR001</small>
+          <small>NRR001</small>
           <h2>Signal Pressure</h2>
           <h3>Notrite Recordings / Launch Drop</h3>
           <p>
@@ -116,13 +118,16 @@ function App() {
         <div id="artists" className="artists">
           <div className="section-head">
             <h2>Our Artists</h2>
-            <a href="#">Coming soon →</a>
+            <a href="#">View roster →</a>
           </div>
           <div className="artist-strip">
-            {artists.map((artist) => (
-              <article key={artist}>
-                <span>NR</span>
-                <h3>{artist}</h3>
+            {artists.slice(0, 5).map((artist) => (
+              <article key={artist.name}>
+                <img src={artist.image} alt={artist.name} />
+                <div>
+                  <h3>{artist.name}</h3>
+                  <p>{artist.sound}</p>
+                </div>
               </article>
             ))}
           </div>
@@ -135,11 +140,10 @@ function App() {
           <a href="#">View all releases →</a>
         </div>
         <div className="release-grid">
-          {releases.map((release, index) => (
-            <article className={`release-tile release-${index + 1}`} key={release.code}>
+          {releases.map((release) => (
+            <article className="release-tile" key={release.code}>
               <div className="mini-art">
-                <NRMark />
-                <div className="art-noise" />
+                <img src={release.image} alt={`${release.title} artwork`} />
                 <span>{release.status}</span>
               </div>
               <small>{release.code}</small>
@@ -176,7 +180,7 @@ function App() {
             <div className="date">TBA<br /><span>2026</span></div>
             <div>
               <h3>Notrite Takeover</h3>
-              <p>Dates, tickets and line-up coming soon.</p>
+              <p>Secret warehouse location. Dates, tickets and line-up coming soon.</p>
               <a className="btn ghost small" href="#contact">More Info</a>
             </div>
           </div>
@@ -201,7 +205,8 @@ function App() {
           <h2>No rules. No limits. Built around music.</h2>
           <p>
             Notrite Recordings starts with drum and bass culture, but the label is built
-            to move wherever the music takes it.
+            to move wherever the music takes it. Releases, collaborations, visuals,
+            merch and events all grow from the same underground energy.
           </p>
         </div>
         <MainLogo />
@@ -211,7 +216,7 @@ function App() {
         <div>
           <p className="eyebrow">Contact</p>
           <h2>Send Us Something</h2>
-          <p>These email links go straight to your Notrite inboxes.</p>
+          <p>For demos, bookings, collaborations and label enquiries, contact the team below.</p>
         </div>
         <div className="emails">
           <a href="mailto:demos@nrrecordings.com">demos@nrrecordings.com</a>
