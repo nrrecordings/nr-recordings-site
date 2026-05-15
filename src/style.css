@@ -102,3 +102,61 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+/* v11 realistic merch product photos */
+.merch-grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.product {
+  aspect-ratio: 1 / 1;
+  border-radius: 0;
+  background: #090909 !important;
+  border: 1px solid rgba(255,255,255,.14);
+  overflow: hidden;
+}
+
+.product img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(.08) contrast(1.06) brightness(.92);
+  transition: .25s;
+}
+
+.merch-grid article h3 {
+  min-height: 42px;
+  margin-top: 12px;
+  line-height: 1.15;
+}
+
+.merch-grid article p {
+  color: #d8d8dd;
+  font-size: 14px;
+  letter-spacing: .06em;
+}
+
+.merch-grid article:hover .product img {
+  transform: scale(1.025);
+  filter: grayscale(0) contrast(1.08) brightness(.98);
+}
+
+@media(max-width: 1250px) {
+  .merch-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media(max-width: 760px) {
+  .merch-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 520px) {
+  .merch-grid {
+    grid-template-columns: 1fr;
+  }
+}

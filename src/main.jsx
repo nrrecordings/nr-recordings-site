@@ -19,11 +19,11 @@ const artists = [
 ];
 
 const merch = [
+  { name: 'NR Logo Hoodie - Black', price: '£49.50', image: '/assets/merch-logo-hoodie-black.jpg' },
+  { name: 'NR Recordings Hoodie - Back Print', price: '£54.00', image: '/assets/merch-backprint-hoodie.jpg' },
+  { name: 'NR Logo Hoodie - Ash Grey', price: '£49.50', image: '/assets/merch-logo-hoodie-grey.jpg' },
   { name: 'Logo Tee', price: '£22.50', image: '/assets/merch-logo-tee.jpg' },
-  { name: 'Logo Hoodie', price: '£45.00', image: '/assets/merch-logo-hoodie.jpg' },
-  { name: 'Crewneck', price: '£36.00', image: '/assets/merch-crewneck.jpg' },
-  { name: 'NR Snapback', price: '£19.80', image: '/assets/merch-snapback.jpg' },
-  { name: 'Tote Bag', price: '£13.50', image: '/assets/merch-tote.jpg' }
+  { name: 'NR Snapback', price: '£19.80', image: '/assets/merch-snapback.jpg' }
 ];
 
 function NRMark({ className = '' }) {
