@@ -18,6 +18,14 @@ const artists = [
   { name: 'SYNAPTIK', sound: 'Minimal future sounds', image: '/assets/artist-synaptik.jpg' }
 ];
 
+const merch = [
+  { name: 'Logo Tee', price: '£22.50', image: '/assets/merch-logo-tee.jpg' },
+  { name: 'Logo Hoodie', price: '£45.00', image: '/assets/merch-logo-hoodie.jpg' },
+  { name: 'Crewneck', price: '£36.00', image: '/assets/merch-crewneck.jpg' },
+  { name: 'NR Snapback', price: '£19.80', image: '/assets/merch-snapback.jpg' },
+  { name: 'Tote Bag', price: '£13.50', image: '/assets/merch-tote.jpg' }
+];
+
 function NRMark({ className = '' }) {
   return <img className={`nr-mark ${className}`} src="/assets/nr-mark.png" alt="NR" />;
 }
@@ -161,11 +169,13 @@ function App() {
             <a href="#">Shopify later →</a>
           </div>
           <div className="merch-grid">
-            {['Logo Tee','Drip Hoodie','Snapback','Side Bag'].map((item) => (
-              <article key={item}>
-                <div className="product">NR</div>
-                <h3>{item}</h3>
-                <p>Coming soon</p>
+            {merch.map((item) => (
+              <article key={item.name}>
+                <div className="product">
+                  <img src={item.image} alt={item.name} />
+                </div>
+                <h3>{item.name}</h3>
+                <p>{item.price}</p>
               </article>
             ))}
           </div>
@@ -215,7 +225,7 @@ function App() {
         <div>
           <p className="eyebrow">Contact</p>
           <h2>Send Us Something</h2>
-          <p>For demos, bookings, collaborations and label enquiries, contact the team below.</p>
+          <p>For demos, bookings, collaborations and label enquiries, contact the team.</p>
         </div>
         <div className="emails">
           <a href="mailto:demos@nrrecordings.com">demos@nrrecordings.com</a>
