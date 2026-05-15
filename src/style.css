@@ -328,24 +328,25 @@
 }
 
 
-.release-logo-panel img,
-.release-logo-panel .mm-logo,
-.release-logo-panel svg {
-  width: 185% !important;
-  max-width: none !important;
-  height: auto !important;
-  object-fit: contain !important;
-  transform: scale(2.6) !important;
-  filter:
-    drop-shadow(0 0 30px rgba(168,85,247,.65))
-    drop-shadow(0 0 90px rgba(168,85,247,.35));
+/* V25 SAFE FIX: only enlarge the NRR001 first-release artwork. 
+   Does not touch merch, header, hero, or NR logo assets. */
+.featured > .first-release-art,
+.featured > .release-art.feature-art.first-release-art {
+  overflow: hidden !important;
+  background: #000 !important;
+  padding: 0 !important;
 }
 
-@media (max-width: 900px) {
-  .release-logo-panel img,
-  .release-logo-panel .mm-logo,
-  .release-logo-panel svg {
-    width: 135% !important;
-    transform: scale(1.6) !important;
-  }
+.featured > .first-release-art img,
+.featured > .release-art.feature-art.first-release-art img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  padding: 0 !important;
+  transform: scale(1.22) !important;
+  display: block !important;
+  filter: drop-shadow(0 0 28px rgba(168,85,247,.42)) !important;
 }
