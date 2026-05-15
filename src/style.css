@@ -228,3 +228,27 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+/* v13 merch fix - fill boxes properly */
+.product {
+  aspect-ratio: 1 / 1 !important;
+  background: #0a0a0a !important;
+  overflow: hidden !important;
+  display: block !important;
+}
+
+.product img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  display: block !important;
+  background: #0a0a0a !important;
+  filter: grayscale(.04) contrast(1.06) brightness(.96) !important;
+}
+
+.merch-grid article:hover .product img {
+  transform: scale(1.025);
+  filter: grayscale(0) contrast(1.08) brightness(1) !important;
+}
