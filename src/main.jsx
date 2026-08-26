@@ -14,6 +14,11 @@ const merch = [
   { name: 'NR Snapback', price: '£19.80', image: '/assets/merch-snapback-new.jpg' }
 ];
 
+const upcomingPreviews = [
+  { title: 'In My Head', artist: 'M & M', src: '/assets/M-and-M-In-My-Head-preview.mp3' },
+  { title: "Thinkin' Bout You", artist: 'M & M', src: '/assets/M-and-M-Thinkin-Bout-You-preview.mp3' }
+];
+
 function NRMark({ className = '' }) {
   return <img className={`nr-logo-image ${className}`} src="/assets/logo-image-1.png" alt="Notrite Recordings" />;
 }
@@ -77,6 +82,10 @@ function App() {
 
         <div className="hero-logo">
           <MainLogo />
+          <div className="dj-stage" aria-label="Notrite DJs">
+            <img className="hero-djs" src="/assets/notrite-djs-transparent.png" alt="Two Notrite DJs at their decks" />
+            <span className="dj-hair-sprig" aria-hidden="true" />
+          </div>
         </div>
       </section>
 
@@ -105,13 +114,25 @@ function App() {
         </div>
 
         <div className="feature-promos">
-          <a className="logo-promo" href="#releases">
+          <div className="logo-promo audio-promo">
             <span>Upcoming</span>
-            <strong>Releases</strong>
-          </a>
-          <a className="logo-promo" href="#events">
+            <strong>Release Previews</strong>
+            <div className="preview-list">
+              {upcomingPreviews.map((track) => (
+                <div className="preview-track" key={track.title}>
+                  <div className="preview-meta">
+                    <b>{track.title}</b>
+                    <small>{track.artist}</small>
+                  </div>
+                  <audio controls preload="metadata" src={track.src}>Your browser does not support audio previews.</audio>
+                </div>
+              ))}
+            </div>
+          </div>
+          <a className="logo-promo event-promo" href="#events">
             <span>Events</span>
             <strong>Coming Soon</strong>
+            <small>Dates, line-ups and ticket news.</small>
           </a>
         </div>
 
@@ -147,10 +168,14 @@ function App() {
             {merch.map((item) => (
               <article key={item.name}>
                 <div className="product">
-                  <img src={item.image} alt={item.name} />
+                  <img className="product-photo" src={item.image} alt={item.name} />
+                  <div className="merch-brand-overlay" aria-hidden="true">
+                    <img src="/assets/logo-image-1.png" alt="" />
+                  </div>
                 </div>
                 <h3>{item.name}</h3>
                 <p>{item.price}</p>
+                <small className="new-site-merch">New website edition</small>
               </article>
             ))}
           </div>
