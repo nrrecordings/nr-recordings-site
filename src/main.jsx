@@ -27,7 +27,7 @@ const merch = [
 ];
 
 function NRMark({ className = '' }) {
-  return <img className={`nr-logo-image ${className}`} src="/assets/nr-logo-new.png" alt="Notrite Recordings" />;
+  return <img className={`nr-logo-image ${className}`} src="/assets/nr-logo-new-transparent.png" alt="Notrite Recordings" />;
 }
 
 function BrandLogo() {

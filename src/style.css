@@ -1,72 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Titan+One&display=swap');
 
 :root{
   --black:#050505;
   --black2:#0a0908;
-  --line:rgba(255,255,255,.14);
-  --coral:#f07f78;
-  --coral-dark:#a83b32;
-  --gold:#f2c95c;
-  --gold-dark:#9a6a12;
-  --green:#9bd89b;
-  --green-dark:#3f6f46;
+  --line:rgba(255,255,255,.16);
+  --coral:#ff8f86;
+  --coral-dark:#c94f46;
+  --gold:#ffd96a;
+  --gold-dark:#b27a18;
+  --green:#a9e8a3;
+  --green-dark:#4f8f57;
   --silver:#d8d8d2;
   --white:#f7f6f2;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--black);color:var(--white);font-family:Inter,Arial,sans-serif}
+body{margin:0;background:var(--black);color:var(--white);font-family:Fredoka,Arial,sans-serif}
 a{text-decoration:none;color:inherit}
-.site{background:#050505;min-height:100vh;overflow-x:hidden}
-.site:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.035;background-image:linear-gradient(rgba(255,255,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.1) 1px,transparent 1px);background-size:38px 38px}
+.site{background:#050505;min-height:100vh;overflow-x:hidden;position:relative}
+.site:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.028;background-image:radial-gradient(circle at 20% 20%,rgba(255,143,134,.22) 0 1px,transparent 2px),radial-gradient(circle at 80% 70%,rgba(255,217,106,.18) 0 1px,transparent 2px);background-size:74px 74px,91px 91px}
 .topbar{height:92px;display:grid;grid-template-columns:190px 1fr 120px;align-items:center;gap:28px;padding:0 42px;background:#050505;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
 .brand-logo{display:flex;align-items:center}
 .nr-logo-image{display:block;width:100%;height:auto;object-fit:contain}
 .topbar .nr-logo-image{width:145px;max-height:70px}
-.topbar nav{display:flex;justify-content:center;gap:clamp(13px,1.8vw,30px);font-family:Anton,Impact,sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:15px}
+.topbar nav{display:flex;justify-content:center;gap:clamp(13px,1.8vw,30px);font-family:Titan One,Impact,sans-serif;text-transform:uppercase;letter-spacing:.05em;font-size:15px}
 .topbar nav a:first-child,.topbar nav a:hover{color:var(--coral)}
 .social-icons{display:flex;gap:18px;justify-content:flex-end;font-size:22px;color:var(--gold)}
 .hero{position:relative;min-height:585px;display:grid;grid-template-columns:.95fr 1.05fr;align-items:center;padding:58px 7vw;border-bottom:1px solid var(--line);overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.86) 0%,rgba(0,0,0,.55) 28%,rgba(0,0,0,.15) 54%,rgba(0,0,0,.5) 100%),linear-gradient(0deg,#050505 0%,rgba(0,0,0,.08) 44%,#080706 100%),url('/assets/hero-crowd.jpg') center center/cover;filter:contrast(1.12) brightness(.92) saturate(.88)}
-.hero-bg:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 63% 42%,rgba(240,127,120,.22),transparent 28%),radial-gradient(circle at 82% 30%,rgba(242,201,92,.14),transparent 25%),linear-gradient(90deg,rgba(0,0,0,.62),transparent 48%)}
-.hero-copy,.hero-logo{position:relative;z-index:2}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.86) 0%,rgba(0,0,0,.55) 28%,rgba(0,0,0,.15) 54%,rgba(0,0,0,.5) 100%),linear-gradient(0deg,#050505 0%,rgba(0,0,0,.08) 44%,#080706 100%),url('/assets/hero-crowd-clean.jpg') center center/cover;filter:contrast(1.12) brightness(.92) saturate(.88)}
+.hero-bg:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 58% 28%,rgba(255,143,134,.28),transparent 24%),radial-gradient(circle at 78% 32%,rgba(255,217,106,.22),transparent 22%),radial-gradient(circle at 82% 75%,rgba(169,232,163,.18),transparent 24%),linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,.2) 55%,rgba(0,0,0,.45))}
+.hero-copy,.hero-logo{position:relative;z-index:2}.hero:before,.hero:after{content:"";position:absolute;z-index:1;border-radius:999px;filter:blur(.2px);pointer-events:none}.hero:before{width:170px;height:170px;right:7%;top:9%;background:radial-gradient(circle,var(--gold) 0 7%,transparent 8%),radial-gradient(circle,var(--coral) 0 5%,transparent 6%);opacity:.55}.hero:after{width:140px;height:140px;left:45%;bottom:7%;background:radial-gradient(circle,var(--green) 0 6%,transparent 7%),radial-gradient(circle,var(--coral) 0 4%,transparent 5%);opacity:.42}
 .eyebrow{margin:0 0 18px;color:var(--coral);text-transform:uppercase;font-weight:900;letter-spacing:.28em;font-size:14px}
-.hero h1{margin:0 0 22px;font-family:Anton,Impact,sans-serif;text-transform:uppercase;font-size:clamp(54px,6.3vw,105px);line-height:.95;letter-spacing:.01em;text-shadow:0 9px 32px #000}
+.hero h1{margin:0 0 22px;font-family:Titan One,Impact,sans-serif;text-transform:uppercase;font-size:clamp(54px,6.3vw,105px);line-height:.95;letter-spacing:.015em;text-shadow:0 9px 32px #000}
 .hero h1 span,.hero h1 strong{display:block}.hero h1 span{color:#e9e7e0}.hero h1 strong{color:var(--coral);font-weight:inherit}
 .hero h1 strong:after{content:"";display:block;width:210px;height:5px;margin-top:10px;background:linear-gradient(90deg,var(--gold),transparent);transform:skew(-13deg)}
 .intro{max-width:450px;line-height:1.7;color:#eee;font-size:17px}
 .buttons{display:flex;gap:18px;flex-wrap:wrap;margin-top:28px}
-.btn{min-height:48px;padding:0 28px;display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.38);font-family:Anton,Impact,sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:14px}
-.btn.primary{background:linear-gradient(135deg,var(--coral-dark),var(--coral),var(--gold));border-color:transparent;color:#130b08}
-.btn.ghost{background:rgba(0,0,0,.48)}
+.btn{min-height:48px;padding:0 28px;display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.38);font-family:Titan One,Impact,sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:14px;border-radius:14px;transition:transform .2s ease,filter .2s ease,box-shadow .2s ease}
+.btn.primary{background:linear-gradient(135deg,var(--coral-dark),var(--coral),var(--gold));border-color:transparent;color:#130b08;box-shadow:0 10px 28px rgba(255,143,134,.18)}.btn:hover{transform:translateY(-2px);filter:saturate(1.08);box-shadow:0 12px 30px rgba(255,143,134,.16)}
+.btn.ghost{background:rgba(0,0,0,.48);border-radius:12px}
 .btn.small{min-height:38px;margin-top:12px}
 .hero-logo{display:grid;place-items:center}
 .main-logo{text-align:center;max-width:500px;width:min(500px,42vw)}
-.main-logo .nr-logo-image{width:100%;max-height:390px;filter:drop-shadow(0 20px 36px rgba(0,0,0,.8))}
+.main-logo .nr-logo-image{width:100%;max-height:390px;filter:drop-shadow(0 18px 28px rgba(0,0,0,.85))}
 .featured{display:grid;grid-template-columns:330px 1fr 1.35fr;border-bottom:1px solid var(--line)}
 .featured>div,.artists{padding:34px 42px;border-right:1px solid var(--line)}.artists{border-right:0}
 .release-art{min-height:260px;background:#070707;border:1px solid rgba(255,255,255,.12);overflow:hidden}.feature-art{padding:0}.feature-art img{width:100%;height:100%;object-fit:cover;display:block}
-.release-info h2,.section-head h2,.about h2,.contact h2,.signup h2{font-family:Anton,Impact,sans-serif;text-transform:uppercase;letter-spacing:.04em;line-height:.98;margin:0}
+.release-info h2,.section-head h2,.about h2,.contact h2,.signup h2{font-family:Titan One,Impact,sans-serif;text-transform:uppercase;letter-spacing:.015em;line-height:1.02;margin:0}
 .release-info small,.release-grid small{color:var(--coral);font-weight:900;letter-spacing:.15em}
 .release-info h3{color:var(--gold);text-transform:uppercase;letter-spacing:.13em}
 .release-info h2{font-size:42px;margin:12px 0 8px}.release-info p{color:#d4d4d8;line-height:1.65;max-width:430px}.platforms{display:flex;gap:20px;flex-wrap:wrap;color:#ddd;margin-top:18px}
 .section-head{display:flex;align-items:baseline;justify-content:space-between;gap:18px;margin-bottom:20px}.section-head h2{font-size:32px;position:relative}.section-head h2:after{content:"";position:absolute;left:0;bottom:-8px;width:70px;height:3px;background:var(--coral)}
-.section-head a{color:var(--gold);text-transform:uppercase;font-weight:800;font-size:12px;letter-spacing:.12em}
-.artist-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.artist-strip article{min-height:185px;position:relative;overflow:hidden;background:#090909;border:1px solid rgba(255,255,255,.08);display:flex;align-items:flex-end}
+.section-head a{color:var(--gold);text-transform:uppercase;font-weight:800;font-size:12px;letter-spacing:.06em}
+.artist-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.artist-strip article{min-height:185px;position:relative;overflow:hidden;background:#090909;border:1px solid rgba(255,255,255,.1);border-radius:16px;display:flex;align-items:flex-end}
 .artist-strip img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(.25) contrast(1.08) brightness(.8);transition:.25s}.artist-strip article:hover img{transform:scale(1.04);filter:grayscale(0) contrast(1.1) brightness(.9)}
 .artist-strip article:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.82),transparent 60%)}.artist-strip div{position:relative;z-index:2;padding:14px}
-.artist-strip h3,.release-grid h3,.merch h3{font-family:Anton,Impact,sans-serif;text-transform:uppercase;letter-spacing:.05em;margin:0;font-size:18px}.artist-strip p{margin:4px 0 0;color:#cfcfd3;font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+.artist-strip h3,.release-grid h3,.merch h3{font-family:Titan One,Impact,sans-serif;text-transform:uppercase;letter-spacing:.015em;margin:0;font-size:18px}.artist-strip p{margin:4px 0 0;color:#cfcfd3;font-size:11px;text-transform:uppercase;letter-spacing:.04em}
 .releases{padding:34px 42px;border-bottom:1px solid var(--line)}.release-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-.mini-art,.product{aspect-ratio:1;display:grid;place-items:center;background:#0b0b0b;border:1px solid rgba(255,255,255,.1)}.mini-art{position:relative;isolation:isolate;overflow:hidden}
+.mini-art,.product{aspect-ratio:1;display:grid;place-items:center;background:#0b0b0b;border:1px solid rgba(255,255,255,.1);border-radius:14px}.mini-art{position:relative;isolation:isolate;overflow:hidden}
 .mini-art img{width:100%;height:100%;object-fit:cover;display:block;filter:contrast(1.08)}.mini-art span{position:absolute;z-index:3;left:12px;bottom:12px;border:1px solid rgba(255,255,255,.24);background:rgba(0,0,0,.45);backdrop-filter:blur(8px);color:#fff;padding:7px 9px;font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.12em}
-.release-grid p,.merch p{margin:2px 0 0;color:#aaa;text-transform:uppercase;font-size:12px}.release-tile em{display:inline-block;margin-top:7px;color:var(--green);font-size:11px;font-style:normal;text-transform:uppercase;letter-spacing:.14em;font-weight:900}
+.release-grid p,.merch p{margin:2px 0 0;color:#aaa;text-transform:uppercase;font-size:12px}.release-tile em{display:inline-block;margin-top:7px;color:var(--green);font-size:11px;font-style:normal;text-transform:uppercase;letter-spacing:.06em;font-weight:900}
 .lower{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}.panel{padding:34px 42px;border-bottom:1px solid var(--line);border-right:1px solid var(--line)}.panel:nth-child(even){border-right:0}
-.merch-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:15px;align-items:start}.product{aspect-ratio:1 / 1;background:#090909!important;border:1px solid rgba(255,255,255,.16);overflow:hidden;display:block}
+.merch-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:15px;align-items:start}.product{aspect-ratio:1 / 1;background:#090909!important;border:1px solid rgba(255,255,255,.16);overflow:hidden;display:block;border-radius:14px}
 .product img{width:100%;height:100%;object-fit:contain!important;object-position:center center!important;display:block;background:#090909;filter:grayscale(.05) contrast(1.05) brightness(.96);transition:.25s}
 .merch-grid article{min-width:0}.merch-grid article h3{font-size:clamp(16px,1.25vw,22px);line-height:1.18;min-height:52px;margin-top:14px;max-width:95%}.merch-grid article p{color:var(--silver);font-size:15px;font-weight:800;letter-spacing:.05em}.merch-grid article:hover .product img{transform:scale(1.02);filter:grayscale(0) contrast(1.08) brightness(1)}
-.event-card{min-height:220px;display:flex;align-items:center;gap:28px;padding:26px;background:linear-gradient(90deg,rgba(0,0,0,.75),rgba(0,0,0,.1)),url('/assets/hero-crowd.jpg') center/cover;border:1px solid rgba(255,255,255,.1)}
-.date{width:75px;height:90px;display:grid;place-items:center;border:1px solid var(--gold);font-family:Anton,Impact,sans-serif;font-size:26px;text-align:center}.date span{font-size:12px;color:#bbb}.event h3{font-family:Anton,Impact,sans-serif;text-transform:uppercase;font-size:34px;margin:0}.event p,.signup p{color:#bbb}
-.signup{grid-column:1/3;display:grid;grid-template-columns:82px 1fr 1.35fr;gap:28px;align-items:center}.mail-icon{width:70px;height:70px;display:grid;place-items:center;border:1px solid var(--green);font-size:34px;box-shadow:0 0 0 14px rgba(155,216,155,.1)}.signup form{display:flex}.signup input{flex:1;min-height:50px;background:#030303;border:1px solid rgba(255,255,255,.2);color:#fff;padding:0 16px}.signup button{width:170px;background:linear-gradient(135deg,var(--green-dark),var(--green));border:0;color:#071008;font-family:Anton,Impact,sans-serif;text-transform:uppercase;letter-spacing:.14em}
+.event-card{min-height:220px;display:flex;align-items:center;gap:28px;padding:26px;background:linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.18)),url('/assets/hero-crowd-clean.jpg') center/cover;border:1px solid rgba(255,255,255,.12);border-radius:18px}
+.date{width:75px;height:90px;display:grid;place-items:center;border:2px solid var(--gold);border-radius:18px;font-family:Titan One,Impact,sans-serif;font-size:26px;text-align:center}.date span{font-size:12px;color:#bbb}.event h3{font-family:Titan One,Impact,sans-serif;text-transform:uppercase;font-size:34px;margin:0}.event p,.signup p{color:#bbb}
+.signup{grid-column:1/3;display:grid;grid-template-columns:82px 1fr 1.35fr;gap:28px;align-items:center}.mail-icon{width:70px;height:70px;display:grid;place-items:center;border:1px solid var(--green);font-size:34px;box-shadow:0 0 0 14px rgba(155,216,155,.1)}.signup form{display:flex}.signup input{flex:1;min-height:50px;background:#030303;border:1px solid rgba(255,255,255,.2);color:#fff;padding:0 16px}.signup button{width:170px;background:linear-gradient(135deg,var(--green-dark),var(--green));border:0;color:#071008;font-family:Titan One,Impact,sans-serif;text-transform:uppercase;letter-spacing:.06em}
 .about,.contact{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding:65px 7vw;border-bottom:1px solid var(--line)}.about h2,.contact h2{font-size:54px;margin:12px 0}.about p:not(.eyebrow),.contact p{color:#d4d4d8;line-height:1.7;max-width:640px}.about .main-logo{opacity:.92;transform:scale(.82)}
 .emails{display:grid;gap:12px}.emails a{border:1px solid rgba(255,255,255,.15);padding:16px 18px;color:#ddd}.emails a:hover{border-color:var(--coral);color:var(--coral)}
 footer{display:grid;grid-template-columns:190px 1fr 250px;gap:30px;padding:38px 42px;color:#aaa}.footer .nr-logo-image{width:150px}footer p{margin:0;line-height:1.7}
@@ -80,3 +80,12 @@ footer{display:grid;grid-template-columns:190px 1fr 250px;gap:30px;padding:38px 
 @media(max-width:900px){.topbar{height:auto;display:block;padding:18px 22px}.topbar nav{margin-top:16px;overflow:auto;justify-content:flex-start;padding-bottom:8px}.hero,.about,.contact{grid-template-columns:1fr}.hero{min-height:auto;padding:52px 24px}.hero-logo{margin-top:32px}.main-logo{width:min(500px,88vw)}.featured{grid-template-columns:1fr}.featured>div,.artists{border-right:0;border-bottom:1px solid var(--line)}.artists{grid-column:auto}.artist-strip,.release-grid{grid-template-columns:repeat(2,1fr)}.lower{grid-template-columns:1fr}.panel{border-right:0}.signup{grid-column:auto;grid-template-columns:1fr}.signup form{display:grid}.signup button{width:100%;min-height:50px}footer{grid-template-columns:1fr}.merch-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){.merch-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:520px){.topbar .nr-logo-image{width:120px}.hero h1{font-size:54px}.buttons{display:grid}.btn{width:100%}.artist-strip,.release-grid,.merch-grid{grid-template-columns:1fr}.featured>div,.artists,.releases,.panel,.about,.contact,footer{padding-left:22px;padding-right:22px}}
+
+/* V29 playful typography: rounded, chunky and closer to the new NR logo */
+body{font-weight:500}
+.intro,.release-info p,.event p,.signup p,.about p,.contact p{font-weight:500}
+.eyebrow,.release-info small,.release-grid small{font-family:Fredoka,Arial,sans-serif;font-weight:700}
+.hero h1,.release-info h2,.section-head h2,.about h2,.contact h2,.signup h2,.artist-strip h3,.release-grid h3,.merch h3,.event h3,.date,.btn,.signup button{font-family:'Titan One',Impact,sans-serif;font-weight:400}
+.topbar nav,.section-head a,.platforms,.artist-strip p,.release-grid p,.release-tile em,.merch p{font-family:Fredoka,Arial,sans-serif}
+.btn{font-size:15px;letter-spacing:.035em}
+.section-head h2{font-size:34px}

@@ -1,0 +1,1 @@
+Notrite Recordings V29 - complete site. Based on V28. Updated site typography to a rounded, playful display font and friendly body font to better match the new NR logo, while preserving the existing site structure, imagery, release content, artist content and merch.
