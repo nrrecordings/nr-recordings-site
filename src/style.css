@@ -89,3 +89,7 @@ body{font-weight:500}
 .topbar nav,.section-head a,.platforms,.artist-strip p,.release-grid p,.release-tile em,.merch p{font-family:Fredoka,Arial,sans-serif}
 .btn{font-size:15px;letter-spacing:.035em}
 .section-head h2{font-size:34px}
+
+/* V30: one current release only */
+.release-grid.single-release{grid-template-columns:minmax(260px,360px)}
+@media(max-width:520px){.release-grid.single-release{grid-template-columns:1fr}}

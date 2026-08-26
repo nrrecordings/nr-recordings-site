@@ -3,27 +3,15 @@ import { createRoot } from 'react-dom/client';
 import './style.css';
 
 const releases = [
-  { code: 'NRR001', title: 'In My Head EP', artist: 'MARK XTC X MISTAFIL', tag: 'Drum & Bass', status: 'Coming Soon', image: '/assets/release-mm-all-in-my-head.jpg' },
-  { code: 'NRR002', title: 'Shadows EP', artist: 'KVRN', tag: 'Dark Rollers', status: 'TBA', image: '/assets/release-shadows.jpg' },
-  { code: 'NRR003', title: 'Pressure', artist: 'DYLX', tag: 'Deep / Tech', status: 'TBA', image: '/assets/release-pressure.jpg' },
-  { code: 'NRR004', title: 'System Error EP', artist: 'RAVEN', tag: 'Bass / Halftime', status: 'TBA', image: '/assets/release-system-error.jpg' }
-];
-
-const artists = [
-  { name: 'KVRN', sound: 'Dark rolling DnB', image: '/assets/artist-kvrn.jpg' },
-  { name: 'DYLX', sound: 'Tech-driven pressure', image: '/assets/artist-dylx.jpg' },
-  { name: 'RAVEN', sound: 'Halftime / experimental', image: '/assets/artist-raven.jpg' },
-  { name: 'VEXTA', sound: 'Atmospheric bass music', image: '/assets/artist-vexta.jpg' },
-  { name: 'SUBSTRIKE', sound: 'Warehouse rollers', image: '/assets/artist-substrike.jpg' },
-  { name: 'SYNAPTIK', sound: 'Minimal future sounds', image: '/assets/artist-synaptik.jpg' }
+  { code: 'NRR001', title: 'In My Head EP', artist: 'MARK XTC X MISTAFIL', tag: 'Drum & Bass', status: 'Coming Soon', image: '/assets/release-in-my-head-duo.png' }
 ];
 
 const merch = [
-  { name: 'NR Logo Hoodie - Black', price: '£49.50', image: '/assets/merch-logo-hoodie-black.jpg' },
-  { name: 'NR Recordings Hoodie - Back Print', price: '£54.00', image: '/assets/merch-backprint-hoodie.jpg' },
-  { name: 'NR Logo Hoodie - Ash Grey', price: '£49.50', image: '/assets/merch-logo-hoodie-grey.jpg' },
-  { name: 'Logo Tee', price: '£22.50', image: '/assets/merch-logo-tee.jpg' },
-  { name: 'NR Snapback', price: '£19.80', image: '/assets/merch-snapback.jpg' }
+  { name: 'NR Logo Hoodie - Black', price: '£49.50', image: '/assets/merch-logo-hoodie-black-new.jpg' },
+  { name: 'NR Recordings Hoodie - Back Print', price: '£54.00', image: '/assets/merch-backprint-hoodie-new.jpg' },
+  { name: 'NR Logo Hoodie - Ash Grey', price: '£49.50', image: '/assets/merch-logo-hoodie-grey-new.jpg' },
+  { name: 'Logo Tee', price: '£22.50', image: '/assets/merch-logo-tee-new.jpg' },
+  { name: 'NR Snapback', price: '£19.80', image: '/assets/merch-snapback-new.jpg' }
 ];
 
 function NRMark({ className = '' }) {
@@ -54,7 +42,6 @@ function App() {
         <nav>
           <a href="#home">Home</a>
           <a href="#releases">Releases</a>
-          <a href="#artists">Artists</a>
           <a href="#events">Events</a>
           <a href="#merch">Merch</a>
           <a href="#demos">Demo Submissions</a>
@@ -95,7 +82,7 @@ function App() {
 
       <section id="featured" className="featured">
         <div className="release-art feature-art first-release-art">
-          <img src="/assets/release-mm-all-in-my-head.jpg" alt="MARK XTC X MISTAFIL - In My Head EP artwork" />
+          <img src="/assets/release-in-my-head-duo.png" alt="MARK XTC X MISTAFIL - In My Head EP artwork" />
         </div>
 
         <div className="release-info first-release-info">
@@ -117,31 +104,13 @@ function App() {
           </div>
         </div>
 
-        <div id="artists" className="artists">
-          <div className="section-head">
-            <h2>Our Artists</h2>
-            <a href="#">View roster →</a>
-          </div>
-          <div className="artist-strip">
-            {artists.slice(0, 5).map((artist) => (
-              <article key={artist.name}>
-                <img src={artist.image} alt={artist.name} />
-                <div>
-                  <h3>{artist.name}</h3>
-                  <p>{artist.sound}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
       </section>
 
       <section id="releases" className="releases">
         <div className="section-head">
           <h2>Latest Releases</h2>
-          <a href="#">View all releases →</a>
         </div>
-        <div className="release-grid">
+        <div className="release-grid single-release">
           {releases.map((release, index) => (
             <article className={`release-tile ${index === 0 ? 'real-first-release' : ''}`} key={release.code}>
               <div className="mini-art">
