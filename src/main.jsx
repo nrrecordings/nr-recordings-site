@@ -9,7 +9,7 @@ const releases = [
 const merch = [
   { name: 'NR Logo Hoodie - Black', price: '£49.50', image: '/assets/merch-logo-hoodie-black-new.jpg' },
   { name: 'NR Recordings Hoodie - Back Print', price: '£54.00', image: '/assets/merch-backprint-hoodie-new.jpg' },
-  { name: 'NR Logo Hoodie - Ash Grey', price: '£49.50', image: '/assets/merch-logo-hoodie-grey-new.jpg' },
+  { name: 'NR Logo Hoodie - Ash Grey', price: '£49.50', image: '/assets/merch-logo-hoodie-grey-v34.jpg' },
   { name: 'Logo Tee', price: '£22.50', image: '/assets/merch-logo-tee-new.jpg' },
   { name: 'NR Snapback', price: '£19.80', image: '/assets/merch-snapback-new.jpg' }
 ];
@@ -83,7 +83,7 @@ function App() {
         <div className="hero-logo">
           <MainLogo />
           <div className="dj-stage" aria-label="Notrite DJs">
-            <img className="hero-djs" src="/assets/notrite-djs-transparent.png" alt="Two Notrite DJs at their decks" />
+            <img className="hero-djs" src="/assets/notrite-djs-hero.png" alt="Two Notrite DJs at their decks" />
             <span className="dj-hair-sprig" aria-hidden="true" />
           </div>
         </div>

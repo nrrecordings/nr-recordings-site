@@ -220,3 +220,34 @@ body{font-weight:500}
 @media(max-width:520px){
   .hero-logo{min-height:330px}.hero-djs{width:620px;bottom:-16px}.dj-hair-sprig{left:19.5%;top:28%;width:50px;height:18px}.audio-promo{min-height:350px;padding:18px}.preview-meta{display:block}.preview-meta small{display:block;margin-top:2px}
 }
+
+
+/* V34 hero layering: DJs sit behind the main logo, never in front. */
+.hero-logo{position:relative;isolation:isolate;display:grid;place-items:center;min-height:500px;overflow:visible}
+.hero-logo .main-logo{position:relative;z-index:4;width:min(560px,58vw);pointer-events:none}
+.hero-logo .main-logo .nr-logo-image{width:100%;height:auto;display:block;filter:none!important}
+.dj-stage{position:absolute!important;z-index:1!important;inset:0!important;pointer-events:none;display:flex;align-items:flex-end;justify-content:center;overflow:visible}
+.hero-djs{position:absolute!important;z-index:1!important;width:min(980px,82vw)!important;max-width:none!important;height:auto!important;bottom:-48px!important;left:50%!important;transform:translateX(-50%)!important;filter:none!important;opacity:1!important}
+.dj-hair-sprig{z-index:3!important;left:28.2%!important;top:18.8%!important;width:62px!important;height:20px!important;background:linear-gradient(180deg,#7b4826,#3d2112)!important}
+
+/* Smaller official chest logo on the ash-grey hoodie mockup. */
+.merch-grid article:nth-child(3) .product-photo{object-fit:cover}
+
+@media(max-width:1200px){
+  .hero-logo{min-height:470px}
+  .hero-logo .main-logo{width:min(520px,62vw)}
+  .hero-djs{width:min(900px,92vw)!important;bottom:-36px!important}
+  .dj-hair-sprig{left:26.8%!important;top:20.8%!important}
+}
+@media(max-width:900px){
+  .hero-logo{min-height:420px}
+  .hero-logo .main-logo{width:min(470px,78vw)}
+  .hero-djs{width:min(820px,118vw)!important;bottom:-20px!important}
+  .dj-hair-sprig{left:23.5%!important;top:22.5%!important}
+}
+@media(max-width:520px){
+  .hero-logo{min-height:340px}
+  .hero-logo .main-logo{width:min(340px,88vw)}
+  .hero-djs{width:660px!important;bottom:-8px!important}
+  .dj-hair-sprig{left:15.5%!important;top:24.5%!important;width:48px!important;height:16px!important}
+}
