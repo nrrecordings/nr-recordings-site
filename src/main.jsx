@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import './style.css';
 
 const releases = [
-  { code: 'NRR001', title: 'In My Head EP', artist: 'MARK XTC X MISTAFIL', tag: 'Drum & Bass', status: 'Coming Soon', image: '/assets/release-in-my-head-duo.png' }
+  { code: 'NRR001', title: 'In My Head EP', artist: 'MARK XTC X MISTAFIL', tag: 'Drum & Bass', status: 'Coming Soon', image: '/assets/Designer.png' }
 ];
 
 const merch = [
@@ -87,7 +87,7 @@ function App() {
 
       <section id="featured" className="featured">
         <div className="release-art feature-art first-release-art">
-          <img src="/assets/release-in-my-head-duo.png" alt="MARK XTC X MISTAFIL - In My Head EP artwork" />
+          <img src="/assets/Designer.png" alt="MARK XTC X MISTAFIL - In My Head EP artwork" />
         </div>
 
         <div className="release-info first-release-info">
