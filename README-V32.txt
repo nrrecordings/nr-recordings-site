@@ -5,7 +5,7 @@ Updates in this build:
 - Keeps only “In My Head EP” in Latest Releases.
 - Keeps “Our Artists” removed.
 - Adds both supplied MP3 clips as playable upcoming-release previews.
-- Adds the supplied two-DJ image to the top hero area and animates it with a subtle DJ groove/bob effect.
+- Adds the supplied two-DJ image to the top hero area as a static hero image (animation removed).
 - Adds a small brown hair overlay to the left DJ in the website hero.
 - Keeps Logo Image 2 as the page background.
 - Keeps Logo Image 1 free of extra CSS black shading/drop-shadow.

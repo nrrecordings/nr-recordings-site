@@ -187,17 +187,13 @@ body{font-weight:500}
   .site{background-size:auto,280px 280px}
 }
 
-/* V32: animated DJ hero, upcoming MP3 previews and refreshed merch branding */
+/* V32 static DJ hero, upcoming MP3 previews and refreshed merch branding */
 .hero-logo{position:relative;isolation:isolate;display:grid;place-items:center;min-height:420px}
-.hero-logo .main-logo{position:relative;z-index:1;animation:logoPulse 7s ease-in-out infinite}
+.hero-logo .main-logo{position:relative;z-index:1}
 .dj-stage{position:absolute;z-index:2;inset:0;pointer-events:none;display:flex;align-items:flex-end;justify-content:center;overflow:visible}
-.hero-djs{width:min(760px,64vw);max-width:none;height:auto;position:absolute;bottom:-40px;left:50%;transform:translateX(-50%);transform-origin:50% 92%;animation:djGroove 3.8s ease-in-out infinite;filter:none!important}
-.dj-hair-sprig{position:absolute;z-index:4;width:64px;height:22px;left:28.6%;top:22.5%;border-radius:70% 70% 25% 25%;background:linear-gradient(180deg,#6f3f1f,#3f2412);transform:rotate(-4deg);box-shadow:inset 0 3px 0 rgba(255,255,255,.12);animation:hairBounce 3.8s ease-in-out infinite}
+.hero-djs{width:min(760px,64vw);max-width:none;height:auto;position:absolute;bottom:-40px;left:50%;transform:translateX(-50%);transform-origin:50% 92%;filter:none!important}
+.dj-hair-sprig{position:absolute;z-index:4;width:64px;height:22px;left:28.6%;top:22.5%;border-radius:70% 70% 25% 25%;background:linear-gradient(180deg,#6f3f1f,#3f2412);transform:rotate(-4deg);box-shadow:inset 0 3px 0 rgba(255,255,255,.12);}
 .dj-hair-sprig:after{content:"";position:absolute;left:8px;right:8px;bottom:-5px;height:8px;border-radius:50%;background:#3f2412;opacity:.88}
-@keyframes djGroove{0%,100%{transform:translateX(-50%) translateY(0) rotate(-.35deg)}50%{transform:translateX(-50%) translateY(-10px) rotate(.35deg)}}
-@keyframes hairBounce{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-10px) rotate(-2deg)}}
-@keyframes logoPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
-@media (prefers-reduced-motion:reduce){.hero-djs,.dj-hair-sprig,.hero-logo .main-logo{animation:none!important}}
 
 .audio-promo{align-items:stretch;justify-content:flex-start;text-align:left;gap:8px;min-height:320px}
 .audio-promo>span,.audio-promo>strong{align-self:center;text-align:center}

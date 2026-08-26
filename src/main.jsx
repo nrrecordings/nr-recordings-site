@@ -169,13 +169,9 @@ function App() {
               <article key={item.name}>
                 <div className="product">
                   <img className="product-photo" src={item.image} alt={item.name} />
-                  <div className="merch-brand-overlay" aria-hidden="true">
-                    <img src="/assets/logo-image-1.png" alt="" />
-                  </div>
                 </div>
                 <h3>{item.name}</h3>
                 <p>{item.price}</p>
-                <small className="new-site-merch">New website edition</small>
               </article>
             ))}
           </div>
