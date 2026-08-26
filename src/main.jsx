@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import './style.css';
 
 const releases = [
-  { code: 'NRR001', title: 'All In My Head EP', artist: 'MARK XTC X MISTAFIL', tag: 'Drum & Bass', status: 'Coming Soon', image: '/assets/release-mm-all-in-my-head.jpg' },
+  { code: 'NRR001', title: 'In My Head EP', artist: 'MARK XTC X MISTAFIL', tag: 'Drum & Bass', status: 'Coming Soon', image: '/assets/release-mm-all-in-my-head.jpg' },
   { code: 'NRR002', title: 'Shadows EP', artist: 'KVRN', tag: 'Dark Rollers', status: 'TBA', image: '/assets/release-shadows.jpg' },
   { code: 'NRR003', title: 'Pressure', artist: 'DYLX', tag: 'Deep / Tech', status: 'TBA', image: '/assets/release-pressure.jpg' },
   { code: 'NRR004', title: 'System Error EP', artist: 'RAVEN', tag: 'Bass / Halftime', status: 'TBA', image: '/assets/release-system-error.jpg' }
@@ -27,17 +27,13 @@ const merch = [
 ];
 
 function NRMark({ className = '' }) {
-  return <img className={`nr-mark ${className}`} src="/assets/nr-mark.png" alt="NR" />;
+  return <img className={`nr-logo-image ${className}`} src="/assets/nr-logo-new.png" alt="Notrite Recordings" />;
 }
 
 function BrandLogo() {
   return (
     <div className="brand-logo">
       <NRMark />
-      <div className="brand-words">
-        <span className="notrite">NOTRITE</span>
-        <span className="recordings">RECORDINGS</span>
-      </div>
     </div>
   );
 }
@@ -46,10 +42,6 @@ function MainLogo() {
   return (
     <div className="main-logo">
       <NRMark />
-      <div className="main-words">
-        <span className="notrite">NOTRITE</span>
-        <span className="recordings">RECORDINGS</span>
-      </div>
     </div>
   );
 }
@@ -103,12 +95,12 @@ function App() {
 
       <section id="featured" className="featured">
         <div className="release-art feature-art first-release-art">
-          <img src="/assets/release-mm-all-in-my-head.jpg" alt="MARK XTC X MISTAFIL - All In My Head EP artwork" />
+          <img src="/assets/release-mm-all-in-my-head.jpg" alt="MARK XTC X MISTAFIL - In My Head EP artwork" />
         </div>
 
         <div className="release-info first-release-info">
           <small>NRR001 / FIRST RELEASE</small>
-          <h2>All In My Head EP</h2>
+          <h2>In My Head EP</h2>
           <h3>MARK XTC X MISTAFIL</h3>
           <p>
             MARK XTC and MISTAFIL join forces for the first official Notrite Recordings release:
