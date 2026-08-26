@@ -7,7 +7,7 @@ const releases = [
 ];
 
 const merch = [
-  { name: 'NR Logo Hoodie - Black', price: '£49.50', image: '/assets/merch-logo-hoodie-black-new.jpg' },
+  { name: 'NR Logo Hoodie - Black', price: '£49.50', image: '/assets/merch-logo-hoodie-black-v38.jpg' },
   { name: 'NR Recordings Hoodie - Back Print', price: '£54.00', image: '/assets/merch-backprint-hoodie-new.jpg' },
   { name: 'NR Logo Hoodie - Ash Grey', price: '£49.50', image: '/assets/merch-logo-hoodie-grey-v34.jpg' },
   { name: 'Logo Tee', price: '£22.50', image: '/assets/merch-logo-tee-new.jpg' },
@@ -46,7 +46,7 @@ function App() {
         <a href="#home"><BrandLogo /></a>
         <nav>
           <a href="#home">Home</a>
-          <a href="#releases">Releases</a>
+          <a href="#upcoming">Releases</a>
           <a href="#events">Events</a>
           <a href="#merch">Merch</a>
           <a href="#demos">Demo Submissions</a>
@@ -110,7 +110,7 @@ function App() {
         </div>
 
         <div className="feature-promos">
-          <div className="logo-promo audio-promo">
+          <div id="upcoming" className="logo-promo audio-promo">
             <span>Upcoming</span>
             <strong>Release Previews</strong>
             <div className="preview-list">
