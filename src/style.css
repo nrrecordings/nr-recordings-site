@@ -251,3 +251,36 @@ body{font-weight:500}
   .hero-djs{width:660px!important;bottom:-8px!important}
   .dj-hair-sprig{left:15.5%!important;top:24.5%!important;width:48px!important;height:16px!important}
 }
+
+/* V35 responsive centering: balanced on desktop, tablet and mobile. */
+.hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr);max-width:1600px;margin:0 auto;width:100%;box-sizing:border-box}
+.hero-copy{max-width:680px;justify-self:center;width:100%}
+.hero-logo{justify-self:center;width:100%;max-width:780px;margin-inline:auto}
+
+@media(max-width:900px){
+  .hero{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:42px 20px 34px}
+  .hero-copy{max-width:680px;margin:0 auto;display:flex;flex-direction:column;align-items:center}
+  .hero h1 strong:after{margin-left:auto;margin-right:auto}
+  .intro{margin-left:auto;margin-right:auto}
+  .buttons{justify-content:center;width:100%}
+  .hero-logo{width:100%;max-width:720px;margin:20px auto 0;overflow:hidden}
+  .hero-logo .main-logo{width:min(470px,76vw);margin-inline:auto}
+  .hero-djs{width:min(780px,110vw)!important;left:50%!important;bottom:-8px!important}
+}
+
+@media(max-width:520px){
+  .topbar{text-align:center}
+  .topbar .nr-logo-image{margin-inline:auto}
+  .topbar nav{justify-content:center;flex-wrap:wrap;overflow:visible;gap:10px 16px}
+  .hero{padding:30px 14px 24px;overflow:hidden}
+  .hero-copy{padding-inline:4px}
+  .hero h1{font-size:clamp(43px,13vw,58px)}
+  .hero-logo{min-height:315px;max-width:100%;margin-top:14px}
+  .hero-logo .main-logo{width:min(320px,82vw)}
+  .hero-djs{width:570px!important;max-width:none!important;bottom:0!important}
+  .dj-hair-sprig{left:17.5%!important;top:25%!important}
+  .featured,.lower,.releases,.merch,.about,.contact,footer{width:100%;box-sizing:border-box;margin-inline:auto}
+  .section-head{text-align:center}
+  .release-info{text-align:center}
+  .release-info .btn{margin-inline:auto}
+}
