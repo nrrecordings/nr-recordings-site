@@ -15,7 +15,7 @@ const merch = [
 ];
 
 function NRMark({ className = '' }) {
-  return <img className={`nr-logo-image ${className}`} src="/assets/nr-logo-new-transparent.png" alt="Notrite Recordings" />;
+  return <img className={`nr-logo-image ${className}`} src="/assets/logo-image-1.png" alt="Notrite Recordings" />;
 }
 
 function BrandLogo() {
@@ -102,6 +102,17 @@ function App() {
             <a className="btn primary" href="#">Pre-Save Soon →</a>
             <a className="btn ghost" href="#demos">Send Demo</a>
           </div>
+        </div>
+
+        <div className="feature-promos">
+          <a className="logo-promo" href="#releases">
+            <span>Upcoming</span>
+            <strong>Releases</strong>
+          </a>
+          <a className="logo-promo" href="#events">
+            <span>Events</span>
+            <strong>Coming Soon</strong>
+          </a>
         </div>
 
       </section>
