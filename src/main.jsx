@@ -82,10 +82,6 @@ function App() {
 
         <div className="hero-logo">
           <MainLogo />
-          <div className="dj-stage" aria-label="Notrite DJs">
-            <img className="hero-djs" src="/assets/notrite-djs-hero.png" alt="Two Notrite DJs at their decks" />
-            <span className="dj-hair-sprig" aria-hidden="true" />
-          </div>
         </div>
       </section>
 

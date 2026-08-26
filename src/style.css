@@ -284,3 +284,6 @@ body{font-weight:500}
   .release-info{text-align:center}
   .release-info .btn{margin-inline:auto}
 }
+
+/* V36: DJ hero artwork removed from top of website. */
+.dj-stage,.hero-djs,.dj-hair-sprig{display:none!important}
